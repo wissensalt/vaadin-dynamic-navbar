@@ -8,8 +8,11 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
+import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.wissensalt.views.MainLayout;
+import jakarta.annotation.security.RolesAllowed;
 
+@RolesAllowed({"ROLE_ADMIN", "ROLE_USER"})
 @PageTitle("Hello World")
 @Route(value = "hello", layout = MainLayout.class)
 @RouteAlias(value = "", layout = MainLayout.class)

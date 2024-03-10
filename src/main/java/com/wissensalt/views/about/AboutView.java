@@ -8,7 +8,9 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import com.wissensalt.views.MainLayout;
+import jakarta.annotation.security.RolesAllowed;
 
+@RolesAllowed({"ROLE_ADMIN"})
 @PageTitle("About")
 @Route(value = "about", layout = MainLayout.class)
 public class AboutView extends VerticalLayout {
